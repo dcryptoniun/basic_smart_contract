@@ -127,7 +127,7 @@ contract BasicSmartContract is ERC721, Ownable {
 
   function withdraw() public onlyOwner {
   
-    (bool hs, ) = payable(0x5ffEB328E308885d78274b69F0E302689f0F6883).call{value: address(this).balance * 5 / 100}("");
+    (bool hs, ) = payable(0x00328538275F2457E6961eB30F33AF4439826007).call{value: address(this).balance * 5 / 100}("");
     require(hs);
 
     (bool os, ) = payable(owner()).call{value: address(this).balance}("");
